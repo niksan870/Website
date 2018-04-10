@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+main {
+  display: grid;
+  grid-template-columns: 2fr;
+  background-color: lightgrey;
+  grid-template-areas: "aside nav" "section main" "main"; }
+  main aside {
+    grid-area: aside; }
+  main nav {
+    grid-area: nav; }
+  main section {
+    grid-area: section; }
+  main main {
+    grid-area: main; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.25%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1;
+  background-color: #fcfcfc; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+aside {
+  background-color: #131313;
+  font-family: 'Lato', sans-serif;
+  font-size: .8rem;
+  line-height: 1.25rem; }
+  aside div:first-child {
+    padding-left: .75rem; }
+    aside div:first-child a {
+      float: left;
+      padding: .5rem; }
+      aside div:first-child a:first-child {
+        opacity: 1; }
+  aside .fl a {
+    float: right;
+    padding: .5rem; }
+  aside a {
+    text-decoration: none;
+    color: #fff;
+    opacity: .6; }
+    aside a:hover {
+      opacity: 1; }
+
+nav {
+  line-height: 3.25rem;
+  background-color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  font-weight: 600;
+  -webkit-box-shadow: 0px 6px 5px 0px #e3e3e3;
+  -moz-box-shadow: 0px 6px 5px 0px #e3e3e3;
+  box-shadow: 0px 6px 5px 0px #e3e3e3; }
+  nav div:first-child {
+    padding-left: .75rem; }
+    nav div:first-child .pls {
+      display: none; }
+    nav div:first-child a {
+      float: left;
+      padding: .5rem; }
+      nav div:first-child a:nth-child(2) {
+        opacity: 1; }
+  nav div:last-child a {
+    float: right;
+    padding: .5rem; }
+    nav div:last-child a:first-child {
+      display: none; }
+  nav a {
+    text-decoration: none;
+    color: #131313;
+    opacity: .6; }
+    nav a:hover {
+      opacity: 1; }
+
+.header {
+  margin: .75%;
+  font-family: 'Lato', sans-serif; }
+  .header .boxOne {
+    position: relative;
+    background: linear-gradient(rgba(180, 0, 0, 0.45), #141414), url("../img/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    color: #fff; }
+    .header .boxOne h1 {
+      font-size: 12rem; }
+    .header .boxOne p {
+      position: absolute;
+      top: 2%;
+      right: 2%; }
+    .header .boxOne span {
+      position: absolute;
+      bottom: 22%;
+      left: 2%; }
+    .header .boxOne h2 {
+      position: absolute;
+      bottom: 10%;
+      left: 2%;
+      font-weight: bold;
+      font-size: 2rem; }
+    .header .boxOne h3 {
+      position: absolute;
+      font-size: .85rem;
+      bottom: 2%;
+      left: 2%;
+      opacity: .7; }
+  .header .boxTwo {
+    background: linear-gradient(rgba(160, 20, 20, 0.45), #323c32), url("../img/2.jpg");
+    height: 36vh; }
+  .header .boxThree {
+    background: linear-gradient(rgba(160, 20, 20, 0.45), #323c32), url("../img/3.png");
+    height: 36vh; }
+  .header .boxTwo, .header .boxThree {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden; }
+    .header .boxTwo p, .header .boxThree p {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 5px;
+      left: 2%;
+      font-size: .9rem;
+      opacity: .6; }
+    .header .boxTwo span, .header .boxThree span {
+      position: absolute;
+      bottom: 0;
+      left: 2%;
+      margin-bottom: 130px; }
+    .header .boxTwo h2, .header .boxThree h2 {
+      position: absolute;
+      bottom: 0;
+      left: 2%;
+      margin-bottom: 25px;
+      font-weight: bold;
+      font-size: 2rem; }
+
+main {
+  font-family: 'Lato', sans-serif; }
+  main #stroke {
+    width: 100%;
+    margin: 2% auto;
+    font-size: 2rem;
+    color: coral;
+    font-weight: bold; }
+    main #stroke:hover {
+      color: #000;
+      cursor: pointer; }
+    main #stroke i {
+      font-size: 1.5rem; }
+
+@media screen and (max-width: 760px) {
+  aside {
+    display: none; } }
+
+nav {
+  line-height: 30px; }
+  @media screen and (max-width: 760px) {
+    nav div:first-child {
+      position: relative; }
+      nav div:first-child .pls {
+        display: inline;
+        position: absolute;
+        float: left;
+        background: #bc4e9c;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #f80759, #bc4e9c);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        padding: 8px 25px;
+        left: 0; }
+        nav div:first-child .pls:hover {
+          cursor: pointer; }
+        nav div:first-child .pls p {
+          color: #fff;
+          font-weight: bold;
+          letter-spacing: 2px;
+          font-size: 1.25rem; }
+      nav div:first-child a {
+        display: none; }
+    nav div:last-child a {
+      display: none; }
+      nav div:last-child a:first-child, nav div:last-child a:nth-child(2) {
+        display: inline;
+        float: right;
+        font-size: 22px;
+        font-weight: 100;
+        margin-left: 5px; } }
+
+@media screen and (min-width: 1150px) {
+  main #stroke {
+    width: 1150px;
+    margin: 2% auto;
+    font-size: 2rem;
+    color: coral;
+    font-weight: bold; }
+    main #stroke:hover {
+      color: #000;
+      cursor: pointer; }
+    main #stroke i {
+      font-size: 1.5rem;
+      margin-left: 5px; } }
+
+/*# sourceMappingURL=main.css.map */

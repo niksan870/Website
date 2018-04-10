@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Wikipedia API Searcher</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<head>
+<div class='container' >
+  <h1>Wikipedia Working with API</h1>
+  <h3>Influenced by Free Code Camp</h3>
+   <div class="textcenter">
+    <div class="fuckyou">
+    <div class="text-center">
+        <a  href = "https://en.wikipedia.org/wiki/Special:Random" target="blank">
+        W
+        </a>
+      </div>
+      </div>
+    </div>
+  
+   <input class="from-control" id="searchTerm">
+   <button id="search" type="button" >Submit</button>
+
+  <ul id="output">
+  </ul>
+    </div>
+    </head>
+    
+
+
+<script>
+    
+  $(document).ready(function(){
+  $("#search").on("click",function(){
+    var searchTerm = $("#searchTerm").val();
+    var url = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${searchTerm}&format=json&callback=?`;
+    $.ajax({
+      type:"GET",
+      url : url,
+      async : false,
+      dataType : "json",
+      success : function(data){
+          $("#output").html("");
+          for(var i = 0; i < data[1].length; i++){
+              $("#output").prepend(`<li><a href =${data[3][i]}>${data[1][i]}</a><p>${data[2][i]}</p></li>`);
+          }
+         $('#searchTerm').val(''); 
+      },
+      error : function(errorMessage){
+        alert("Error");
+      }
+    });
+  });
+        
+      $('#searchTerm').keypress(function(e){
+          if(e.which == 13){
+              $('#search').click();
+          }
+      });
+});
+</script>
+ 
+</body>
+</html>

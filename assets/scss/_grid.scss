@@ -1,0 +1,47 @@
+header {
+    grid-area: header;
+}
+
+section {
+    grid-area: section;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "section"
+}
+
+.left{
+    grid-area: left;
+}
+
+.right{
+    grid-area: right
+}
+
+#about-me{
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-areas:
+        "left right right"
+        "left right right"
+}
+
+@media (max-width: 900px){
+    #about-me{ 
+        grid-template-columns: 1fr;
+        display: grid; 
+        grid-template-areas:
+        "left"
+        "right" 
+    }
+}
+
+.posts{
+    display: grid;
+    grid-template-areas: repeat(3, 1fr);
+}
+
+

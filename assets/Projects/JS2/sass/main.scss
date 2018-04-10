@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700');
+
+body{
+    background-color: #000;
+    font-family: 'Work Sans', sans-serif;
+}
+.container{
+    width: 250px;
+    float: left;
+    margin-top: 70px;
+    margin-left: 8.5%;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    .title{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .subtitle{
+        font-size: 24px;
+    }
+}
+
+
+#location{
+    grid-area: location;
+    text-align: center;
+    border-top: 1px solid #fff;
+    padding:5px 20px 10px 20px;
+}
+#temperature{
+    grid-area: temperature;
+    text-align: center;
+    border:1px solid #fff;
+    position: relative;
+    #temperature-num{
+        font-size: 48px;
+    }
+    #temperature-scale{
+        font-size: 20px;
+    }
+}
+
+#weather-condition{
+    grid-area: weather-condition;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#weather-icon{
+    grid-area: weather-icon;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+
+
+.weather-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "temperature location"
+        "temperature weather-condition"
+        "temperature weather-icon"
+}
+
+.weather-info{
+    img, #weather-condition{
+        padding:0 20px;
+    }
+}
+
+
+#map{
+    width: 700px;
+    height: 400px;
+    float: left;
+    margin-left: 7.5%;
+}
+
+article{
+    color: white;
+    clear: both;
+    text-align: center;
+    padding: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

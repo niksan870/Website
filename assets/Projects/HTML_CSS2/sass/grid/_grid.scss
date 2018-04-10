@@ -1,0 +1,22 @@
+main{
+    display: grid;
+    grid-template-columns: 2fr;
+    background-color: lightgrey;
+    grid-template-areas:
+        "aside nav"
+        "section main"
+        "main";
+    aside{
+        grid-area:aside;
+    }
+    nav{
+        grid-area:nav;
+    }
+    section{
+        grid-area:section;
+    }
+    main{
+        grid-area:main;
+    }
+}
+

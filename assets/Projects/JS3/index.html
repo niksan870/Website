@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <main>
+        <i class="fa fa-quote-left" ></i> <h1 class="shift"></h1><i class="fa fa-quote-right" ></i> 
+        <p class="shift"></p>
+        <div class="links">
+            <a href="#"><i class="fa fa-twitter" ></i></a>
+            <a href="#"><i class="fa fa-tumblr"></i></a>
+        </div>
+        <button>New Quote</button>
+    </main>
+    
+    <script>
+        
+        const quotes = ["Made it, Ma! Top of the world!!", "One morning I shot an elephant in my pajamas. How he got in my pajamas, I don't know.", "He who has a 'why' to live, can bear with almost any 'how'.", "A martini. Shaken, not stirred."];
+        const autors = ["White Heat", "Animal Crackers", "Friedrich Nietzsche", "Goldfinger"];
+        const button = document.querySelector('button');
+        var links = document.querySelectorAll('a');
+        var heading = document.querySelector('h1');
+        var writer = document.querySelector('p');
+        var body = document.querySelector('body');
+        var currentNumber;
+        
+        function changeQuotesAndAuthor(){
+            currentNumber++;
+            if(currentNumber >= (quotes.length)) currentNumber = 0;
+            heading.textContent = quotes[currentNumber];
+            writer.textContent = autors[currentNumber];
+        }
+        
+        function randomColors(){
+            var r = Math.floor(Math.random() * 255);
+            var g = Math.floor(Math.random() * 255);
+            var b = Math.floor(Math.random() * 255);
+            return col = `rgb(${r},${g},${b})`;
+        }
+        
+        function changeColors(e) {
+            var curColor = randomColors();
+            heading.style.color = curColor;
+            button.style.backgroundColor = curColor;
+            body.style.backgroundColor = curColor;
+            writer.style.color = curColor;
+            links[0].style.backgroundColor = curColor;
+            links[1].style.backgroundColor = curColor;
+        }
+        
+        button.addEventListener('click', changeColors);
+        button.addEventListener('click', changeQuotesAndAuthor);
+        
+         window.onload = function(){
+            var curColor = randomColors();
+            currentNumber = Math.floor(Math.random() * quotes.length );
+            heading.textContent = quotes[currentNumber];
+            writer.textContent = autors[currentNumber];
+            heading.style.color = curColor;
+            button.style.backgroundColor = curColor;
+            body.style.backgroundColor = curColor;
+            writer.style.color = curColor;
+            links[0].style.backgroundColor = curColor;
+            links[1].style.backgroundColor = curColor;
+        };
+        
+    </script>
+    
+</body>
+</html>

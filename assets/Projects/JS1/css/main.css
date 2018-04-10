@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+@import url("https://fonts.googleapis.com/css?family=Patua+One");
+body {
+  font-family: 'Lobster', Times New Roman;
+  background-image: url("../wiki.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; }
+
+.container {
+  width: 500px;
+  margin: auto; }
+  .container input {
+    width: 100%; }
+  .container .fuckyou {
+    margin: 40px 0 25px 0;
+    text-align: center; }
+    .container .fuckyou .text-center {
+      text-align: center;
+      background-color: dodgerblue;
+      padding: 20px 10px;
+      border-radius: 30px;
+      display: inline-block;
+      margin: auto;
+      font-family: monospace;
+      font-family: 'Patua One', cursive; }
+      .container .fuckyou .text-center a {
+        font-size: 98px;
+        text-decoration: none;
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: #1c1c1c; }
+  .container input {
+    line-height: 1.5; }
+  .container button {
+    background-color: dodgerblue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 0; }
+  .container #output li {
+    background-color: dodgerblue;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    list-style-type: none;
+    color: #1c1c1c; }
+    .container #output li a {
+      text-decoration: none;
+      color: #1c1c1c;
+      font-size: 24px; }
+
+/*# sourceMappingURL=main.css.map */

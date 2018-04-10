@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Weather App</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+ 
+ <div class="container">
+  <div class="title">Weather App</div>
+  <div class="weather-info">
+    <div id="location" class="info"></div>
+    <div id="temperature" class="info">
+      <span id="temperature-num"></span>
+      <span id="temperature-scale">C</span>
+    </div>
+    <div id="weather-condition" class="info"></div>
+    <img src="" alt="icon" id="weather-icon">
+  </div>
+</div>
+ 
+<div id="map"></div>
+
+<article class="description">
+    This App takes your location(longtitude and latitude) and shows you what's the weather in your town.
+</article>
+ 
+<script>
+    
+    $(document).ready(function(){
+        
+        if(navigator.geolocation){
+              navigator.geolocation.getCurrentPosition(position => {
+                  getWeather(position.coords.latitude, position.coords.longitude);
+                  initMap(position.coords.latitude, position.coords.longitude);
+        });
+        } else {
+            alert('The location is not found');
+        }
+        
+        function getWeather(lat, long) {
+          const URL = `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${long}`;
+            $.getJSON(URL, function(data){
+               console.log(data); 
+               updatesDom(data);
+            });
+        }
+        
+        
+        getWeather();
+        var temp;
+        
+        function updatesDom(data){
+            const city = data.name;
+            temp  = Math.round(data.main.temp);
+            const desc = data.weather[0].description;
+            const icon = data.weather[0].icon;
+            
+            
+            $('#location').html(city);
+            $('#temperature-num').html(temp);
+            $('#weather-condition').html(desc);
+            $('#weather-icon').attr('src', icon);
+        }
+        
+        $( "#temperature-scale" ).click(function() {
+              var farh = (temp * 1.8) + 30;
+              if($('#temperature-num')[0].textContent == temp){
+                   $('#temperature-num').html(farh);
+                  $('#temperature-scale').html('F');
+              }else{
+                  $('#temperature-num').html(temp);
+                  $('#temperature-scale').html('C');
+              } 
+        });
+    });
+    
+         function initMap(lat, long){
+             var location = {lat: lat, lng: long};
+             var map = new google.maps.Map(document.getElementById('map'),{
+                 zoom: 12,
+                 center: location
+             });
+             var marker = new google.maps.Marker({
+                 position: location,
+                 map: map
+             });
+         }
+     </script>
+     
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeDPx3jBwK_2jGMykX6bE8pbn2D8CR2FQ&callback=initMap"
+    async defer></script>
+ 
+</body>
+</html>

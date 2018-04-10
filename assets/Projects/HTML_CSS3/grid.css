@@ -1,0 +1,55 @@
+.adverts{
+    grid-area: adverts;
+}
+
+nav{
+    grid-area: nav;
+}
+
+header{
+    grid-area: header;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+    grid-gap: 10px;
+    margin: 10px ;
+    grid-template-areas: 
+        "adverts adverts adverts"
+        "nav nav nav"
+        "header header header"
+}
+
+
+
+
+
+
+header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 10px;
+    margin: 10px ;
+    grid-template-areas: 
+        "boxOne boxOne boxTwo"
+        "boxOne boxOne boxThree";
+}
+
+header > *{
+    background-color: aquamarine;
+}
+
+.boxOne{
+    grid-area: boxOne;
+}
+
+.boxTwo{
+    grid-area: boxTwo;
+}
+
+.boxThree{
+    grid-area: boxThree;
+}

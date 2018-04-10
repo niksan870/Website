@@ -1,0 +1,20 @@
+#subbmitField{
+    grid-area: subbmitField;
+    
+}
+
+aside{
+    grid-area: aside;
+    
+}
+
+footer{
+    grid-area: footer;
+}
+
+section{
+    display: grid; 
+    grid-template-areas: 
+        "subbmitField aside"
+        "footer footer"
+}
